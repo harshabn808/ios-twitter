@@ -55,7 +55,7 @@
 }
 
 - (void) reloadTable:(UIRefreshControl*)refreshControl {
-    [self.tableView reloadData];
+    [self fetchTimeline];
     [refreshControl endRefreshing];
 }
 
