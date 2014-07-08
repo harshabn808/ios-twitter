@@ -83,7 +83,7 @@ NSInteger const maxCharacterCount = 140;
 - (void)textViewDidChange:(UITextView *)textView {
     NSInteger charactersLeft = maxCharacterCount - textView.text.length;
     self.characterCountLabel.text = [@(charactersLeft) stringValue];
-    self.characterCountLabel.textColor = (charactersLeft >= 20) ? [UIColor lightGrayColor] : [UIColor redColor];
+    self.characterCountLabel.textColor = (charactersLeft >= 20) ? [UIColor whiteColor] : [UIColor redColor];
     self.tweetButton.enabled = (charactersLeft >= 0) && (charactersLeft < maxCharacterCount);
 }
 
