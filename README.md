@@ -21,7 +21,7 @@ Time spent = >15 hrs
   * [ ] Optional: User can load more tweets once they reach the bottom of the feed using infinite loading similar to the actual Twitter client.
 
 ## Walkthrough
-![demo](twitter.gif)
+![demo](twitter.gif)  ![demo](Twitter-redux.gif)
 
 
 ## Libraries Used
