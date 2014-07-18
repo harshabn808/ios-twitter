@@ -13,6 +13,7 @@
 #import "TweetDetailViewController.h"
 #import "MBProgressHUD.h"
 #import "MainViewController.h"
+#import "ProfileViewController.h"
 
 @interface TwitterViewController ()
 
@@ -28,7 +29,6 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        [self fetchTimeline];
     }
     return self;
 }
@@ -40,10 +40,10 @@
     
     self.tableView.dataSource = self;
     self.tableView.delegate = self;
+
+    self.navigationItem.title = self.type;
     
-    self.navigationItem.title = @"Home";
-    
-    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Logout" style:UIBarButtonItemStylePlain target:self action:@selector(onLogout)];
+    //self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Logout" style:UIBarButtonItemStylePlain target:self action:@selector(onLogout)];
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"New" style:UIBarButtonItemStylePlain target:self action:@selector(onCompose)];
     
     [self.tableView registerNib:[UINib nibWithNibName:@"TwitterCell" bundle:nil] forCellReuseIdentifier:@"TwitterCell"];
@@ -52,6 +52,8 @@
     UIRefreshControl *refreshControl = [[UIRefreshControl alloc] init];
     [refreshControl addTarget:self action:@selector(reloadTable:) forControlEvents:UIControlEventValueChanged];
     [self.tableView addSubview:refreshControl];
+    
+    [self fetchTimeline];
 }
 
 - (void) reloadTable:(UIRefreshControl*)refreshControl {
@@ -76,6 +78,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     TwitterCell *cell = [tableView dequeueReusableCellWithIdentifier:@"TwitterCell" forIndexPath:indexPath];
     cell.tweet = self.tweets[indexPath.row];
+    cell.delegate = self;
     return cell;
 }
 
@@ -85,7 +88,7 @@
     [self.prototypeCell layoutIfNeeded];
 
     CGSize size = [self.prototypeCell.contentView systemLayoutSizeFittingSize:UILayoutFittingCompressedSize];
-    NSLog(@"%f", size.height);
+    //NSLog(@"%f", size.height);
     //return size.height + 1;
     if (tweet.retweetedTweet == nil) {
         return 140;
@@ -98,8 +101,11 @@
     MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     hud.labelText = @"Loading Timeline";
 
-    [[TwitterService instance] homeTimelineWithSuccess:^(AFHTTPRequestOperation *operation, NSArray *tweets) {
-        self.tweets = tweets;[self.tweets arrayByAddingObjectsFromArray:tweets];
+    [[TwitterService instance]  TimelineType:self.type WithSuccess:^(AFHTTPRequestOperation *operation, NSArray *tweets) {
+        self.tweets = tweets;
+        [self.tweets arrayByAddingObjectsFromArray:tweets];
+        
+        //[[self navigationItem] setPrompt: nil];
         [self.tableView reloadData];
         [hud hide:YES];
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
@@ -117,12 +123,6 @@
     [self.navigationController pushViewController:tdvc animated:YES];
 }
 
-- (void) onLogout {
-    [[TwitterService instance] logout];
-    MainViewController *mvc = [[MainViewController alloc] init];
-    [self presentViewController:mvc animated:YES completion:nil];
-}
-
 - (void)onCompose {
     ComposeViewController *cvc = [[ComposeViewController alloc] init];
     cvc.delegate = self;
@@ -133,6 +133,12 @@
     NSArray *temp = @[tweet];
     self.tweets = [temp arrayByAddingObjectsFromArray:self.tweets];
     [self.tableView reloadData];
+}
+
+- (void)didTapProfileImage:(TwitterCell *)cell {
+    ProfileViewController *vc = [[ProfileViewController alloc] init];
+    vc.user = cell.tweet.user;
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 @end

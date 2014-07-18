@@ -45,7 +45,10 @@ static User *_currentUser = nil;
     return @{
              @"profileBannerUrl": @"profile_banner_url",
              @"profileImageUrl": @"profile_image_url",
-             @"screenName": @"screen_name"
+             @"screenName": @"screen_name",
+             @"followersCount": @"followers_count",
+             @"followingCount": @"friends_count",
+             @"tweetCount": @"statuses_count"
              };
 }
 
@@ -62,5 +65,6 @@ static User *_currentUser = nil;
         return [NSURL URLWithString:urlString];
     }];
 }
+
 
 @end

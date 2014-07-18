@@ -18,5 +18,9 @@
 @property (nonatomic, copy, readonly) NSURL *profileImageUrl;
 @property (nonatomic, copy, readonly) NSString *name;
 @property (nonatomic, copy, readonly) NSString *screenName;
+@property (nonatomic, readonly) NSInteger followersCount;
+@property (nonatomic, readonly) NSInteger followingCount;
+@property (nonatomic, readonly) NSInteger tweetCount;
+
 
 @end

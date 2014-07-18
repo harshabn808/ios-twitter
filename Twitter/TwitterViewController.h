@@ -8,7 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "ComposeViewController.h"
+#import "TwitterCell.h"
 
-@interface TwitterViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, ComposeViewControllerDelegate>
+@interface TwitterViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, ComposeViewControllerDelegate, TwitterCellDelegate>
+@property (nonatomic) NSString *type;
 
 @end

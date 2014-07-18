@@ -29,7 +29,9 @@
 
 - (void)awakeFromNib
 {
-    // Initialization code
+    UITapGestureRecognizer *tapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(onTapProfileImage)];
+    [self.profileImageView addGestureRecognizer:tapGestureRecognizer];
+    self.profileImageView.userInteractionEnabled = YES;
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated
@@ -71,5 +73,8 @@
     
 }
 
+- (void)onTapProfileImage {
+    [self.delegate didTapProfileImage:self];
+}
 
 @end

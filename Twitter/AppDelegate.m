@@ -8,7 +8,7 @@
 
 #import "AppDelegate.h"
 #import "MainViewController.h"
-#import "TwitterViewController.h"
+#import "HomeViewController.h"
 #import "TwitterService.h"
 #import "User.h"
 
@@ -22,17 +22,13 @@
     User *currentUser = [User currentUser];
     
     if (currentUser != nil) {
-        UINavigationController *nvc = [[UINavigationController alloc] initWithRootViewController:[[TwitterViewController alloc] init]];
-        nvc.navigationBar.tintColor = [UIColor whiteColor];
-        nvc.navigationBar.barTintColor = [UIColor colorWithRed:64/255.0f green:153/255.0f blue:255/255.0f alpha:0.0f];
         
         NSDictionary *textTitleOptions = [NSDictionary dictionaryWithObjectsAndKeys:[UIColor whiteColor], UITextAttributeTextColor, [UIColor whiteColor], UITextAttributeTextShadowColor, nil];
         [[UINavigationBar appearance] setTitleTextAttributes:textTitleOptions];
         
-        nvc.navigationBar.translucent = NO;
-        self.window.rootViewController = nvc;
+        self.window.rootViewController = [[HomeViewController alloc] init];
     } else {
-        self.window.rootViewController = [[MainViewController alloc] init];
+        self.window.rootViewController = [[HomeViewController alloc] init];
     }
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];

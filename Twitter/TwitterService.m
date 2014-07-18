@@ -46,9 +46,11 @@
     [User setCurrentUser:nil];
 }
 
-- (void) homeTimelineWithSuccess:(void (^)(AFHTTPRequestOperation *operation, NSArray *tweets))success
+- (void) TimelineType:(NSString *)type WithSuccess:(void (^)(AFHTTPRequestOperation *operation, NSArray *tweets))success
                                             failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failure {
-    [self GET:@"1.1/statuses/home_timeline.json" parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+    NSString *endpoint = ([type isEqual:@"Mentions"]) ? @"1.1/statuses/mentions_timeline.json" : @"1.1/statuses/home_timeline.json";
+
+    [self GET:endpoint parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
         NSArray *tweets = [MTLJSONAdapter modelsOfClass:[Tweet class] fromJSONArray:responseObject error:nil];
         success(operation, tweets);
     }
@@ -90,6 +92,7 @@
 
 - (void)currentUserWithSuccess:(void (^)(AFHTTPRequestOperation *operation, User *currentUser))success failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failure {
     [self GET:@"1.1/account/verify_credentials.json" parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        //NSLog(@"%@", responseObject);
         User *currentUser = [MTLJSONAdapter modelOfClass:[User class] fromJSONDictionary:responseObject error:nil];
         success(operation, currentUser);
     } failure:failure];

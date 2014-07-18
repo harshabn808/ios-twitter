@@ -11,6 +11,7 @@
 #import "UIImageView+AFNetworking.h"
 #import "NSDate+DateTools.h"
 #import "ComposeViewController.h"
+#import "ProfileViewController.h"
 
 @interface TweetDetailViewController ()
 
@@ -35,9 +36,11 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         self.title = @"Tweet";
-        
-        // init the nav bar items
         self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Reply" style:UIBarButtonItemStylePlain target:self action:@selector(onReplyButton)];
+        
+        UITapGestureRecognizer *tapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(onTapProfileImage)];
+        [self.userProfileImageView addGestureRecognizer:tapGestureRecognizer];
+        self.userProfileImageView.userInteractionEnabled = YES;
     }
     return self;
 }
@@ -89,6 +92,12 @@
 
 - (IBAction)onReplyIcon:(id)sender {
     [self onReplyButton];
+}
+
+- (void) onTapProfileImage {
+    ProfileViewController *vc = [[ProfileViewController alloc] init];
+    vc.user = self.tweet.user;
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 @end

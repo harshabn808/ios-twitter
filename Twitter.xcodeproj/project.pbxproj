@@ -33,6 +33,16 @@
 		79E2CB6C196B705000A16C82 /* TweetDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 79E2CB6A196B705000A16C82 /* TweetDetailViewController.xib */; };
 		79E2CB73196B7F2A00A16C82 /* ComposeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79E2CB71196B7F2A00A16C82 /* ComposeViewController.m */; };
 		79E2CB74196B7F2A00A16C82 /* ComposeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 79E2CB72196B7F2A00A16C82 /* ComposeViewController.xib */; };
+		79E2CB781974974800A16C82 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79E2CB761974974800A16C82 /* ProfileViewController.m */; };
+		79E2CB791974974800A16C82 /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 79E2CB771974974800A16C82 /* ProfileViewController.xib */; };
+		79E2CBC71977502000A16C82 /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79E2CBC51977502000A16C82 /* MenuViewController.m */; };
+		79E2CBC81977502000A16C82 /* MenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 79E2CBC61977502000A16C82 /* MenuViewController.xib */; };
+		79E2CBD11977523D00A16C82 /* MenuHeaderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 79E2CBCF1977523D00A16C82 /* MenuHeaderCell.m */; };
+		79E2CBD21977523D00A16C82 /* MenuHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 79E2CBD01977523D00A16C82 /* MenuHeaderCell.xib */; };
+		79E2CBD61977583C00A16C82 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79E2CBD41977583C00A16C82 /* HomeViewController.m */; };
+		79E2CBD71977583C00A16C82 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 79E2CBD51977583C00A16C82 /* HomeViewController.xib */; };
+		79E2CBE01978930F00A16C82 /* ContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79E2CBDE1978930F00A16C82 /* ContainerViewController.m */; };
+		79E2CBE11978930F00A16C82 /* ContainerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 79E2CBDF1978930F00A16C82 /* ContainerViewController.xib */; };
 		DBF47F57D4CC4BE5A97E4CCA /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E4F2853A1D9145E98A012506 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -85,6 +95,21 @@
 		79E2CB70196B7F2A00A16C82 /* ComposeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ComposeViewController.h; sourceTree = "<group>"; };
 		79E2CB71196B7F2A00A16C82 /* ComposeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ComposeViewController.m; sourceTree = "<group>"; };
 		79E2CB72196B7F2A00A16C82 /* ComposeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ComposeViewController.xib; sourceTree = "<group>"; };
+		79E2CB751974974800A16C82 /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
+		79E2CB761974974800A16C82 /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
+		79E2CB771974974800A16C82 /* ProfileViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
+		79E2CBC41977502000A16C82 /* MenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuViewController.h; sourceTree = "<group>"; };
+		79E2CBC51977502000A16C82 /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuViewController.m; sourceTree = "<group>"; };
+		79E2CBC61977502000A16C82 /* MenuViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuViewController.xib; sourceTree = "<group>"; };
+		79E2CBCE1977523D00A16C82 /* MenuHeaderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuHeaderCell.h; sourceTree = "<group>"; };
+		79E2CBCF1977523D00A16C82 /* MenuHeaderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuHeaderCell.m; sourceTree = "<group>"; };
+		79E2CBD01977523D00A16C82 /* MenuHeaderCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuHeaderCell.xib; sourceTree = "<group>"; };
+		79E2CBD31977583C00A16C82 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		79E2CBD41977583C00A16C82 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		79E2CBD51977583C00A16C82 /* HomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		79E2CBDD1978930F00A16C82 /* ContainerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContainerViewController.h; sourceTree = "<group>"; };
+		79E2CBDE1978930F00A16C82 /* ContainerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContainerViewController.m; sourceTree = "<group>"; };
+		79E2CBDF1978930F00A16C82 /* ContainerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ContainerViewController.xib; sourceTree = "<group>"; };
 		9F473D70DD01445BB9521567 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		E4F2853A1D9145E98A012506 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -174,6 +199,21 @@
 				79E2CB70196B7F2A00A16C82 /* ComposeViewController.h */,
 				79E2CB71196B7F2A00A16C82 /* ComposeViewController.m */,
 				79E2CB72196B7F2A00A16C82 /* ComposeViewController.xib */,
+				79E2CB751974974800A16C82 /* ProfileViewController.h */,
+				79E2CB761974974800A16C82 /* ProfileViewController.m */,
+				79E2CB771974974800A16C82 /* ProfileViewController.xib */,
+				79E2CBC41977502000A16C82 /* MenuViewController.h */,
+				79E2CBC51977502000A16C82 /* MenuViewController.m */,
+				79E2CBC61977502000A16C82 /* MenuViewController.xib */,
+				79E2CBCE1977523D00A16C82 /* MenuHeaderCell.h */,
+				79E2CBCF1977523D00A16C82 /* MenuHeaderCell.m */,
+				79E2CBD01977523D00A16C82 /* MenuHeaderCell.xib */,
+				79E2CBD31977583C00A16C82 /* HomeViewController.h */,
+				79E2CBD41977583C00A16C82 /* HomeViewController.m */,
+				79E2CBD51977583C00A16C82 /* HomeViewController.xib */,
+				79E2CBDD1978930F00A16C82 /* ContainerViewController.h */,
+				79E2CBDE1978930F00A16C82 /* ContainerViewController.m */,
+				79E2CBDF1978930F00A16C82 /* ContainerViewController.xib */,
 			);
 			path = Twitter;
 			sourceTree = "<group>";
@@ -285,14 +325,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				79E2CB791974974800A16C82 /* ProfileViewController.xib in Resources */,
+				79E2CBE11978930F00A16C82 /* ContainerViewController.xib in Resources */,
 				79E2CB6C196B705000A16C82 /* TweetDetailViewController.xib in Resources */,
 				79E2CB1E196A508000A16C82 /* InfoPlist.strings in Resources */,
 				79E2CB5C196AF13500A16C82 /* TwitterCell.xib in Resources */,
 				79E2CB46196A50A100A16C82 /* MainViewController.xib in Resources */,
 				79E2CB55196A75E600A16C82 /* TwitterViewController.xib in Resources */,
 				79E2CB4D196A618600A16C82 /* Twitter.plist in Resources */,
+				79E2CBC81977502000A16C82 /* MenuViewController.xib in Resources */,
 				79E2CB26196A508000A16C82 /* Images.xcassets in Resources */,
+				79E2CBD21977523D00A16C82 /* MenuHeaderCell.xib in Resources */,
 				79E2CB74196B7F2A00A16C82 /* ComposeViewController.xib in Resources */,
+				79E2CBD71977583C00A16C82 /* HomeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -349,11 +394,16 @@
 				79E2CB5B196AF13500A16C82 /* TwitterCell.m in Sources */,
 				79E2CB73196B7F2A00A16C82 /* ComposeViewController.m in Sources */,
 				79E2CB45196A50A100A16C82 /* MainViewController.m in Sources */,
+				79E2CBD61977583C00A16C82 /* HomeViewController.m in Sources */,
 				79E2CB5F196AFCC200A16C82 /* Tweet.m in Sources */,
 				79E2CB6B196B705000A16C82 /* TweetDetailViewController.m in Sources */,
+				79E2CBC71977502000A16C82 /* MenuViewController.m in Sources */,
 				79E2CB20196A508000A16C82 /* main.m in Sources */,
+				79E2CB781974974800A16C82 /* ProfileViewController.m in Sources */,
+				79E2CBD11977523D00A16C82 /* MenuHeaderCell.m in Sources */,
 				79E2CB54196A75E600A16C82 /* TwitterViewController.m in Sources */,
 				79E2CB4B196A5B8D00A16C82 /* TwitterService.m in Sources */,
+				79E2CBE01978930F00A16C82 /* ContainerViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

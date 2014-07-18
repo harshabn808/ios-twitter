@@ -8,7 +8,7 @@
 
 #import "MainViewController.h"
 #import "TwitterService.h"
-#import "TwitterViewController.h"
+#import "HomeViewController.h"
 
 @interface MainViewController ()
 - (IBAction)onLoginBtnClick:(id)sender;
@@ -54,16 +54,7 @@
 }
 
 - (void)onLoginComplete {
-    UINavigationController *nvc = [[UINavigationController alloc] initWithRootViewController:[[TwitterViewController alloc] init]];
-    nvc.navigationBar.tintColor = [UIColor whiteColor];
-    nvc.navigationBar.barTintColor = [UIColor colorWithRed:64/255.0f green:153/255.0f blue:255/255.0f alpha:0.0f];
-    
-    NSDictionary *textTitleOptions = [NSDictionary dictionaryWithObjectsAndKeys:[UIColor whiteColor], UITextAttributeTextColor, [UIColor whiteColor], UITextAttributeTextShadowColor, nil];
-    [[UINavigationBar appearance] setTitleTextAttributes:textTitleOptions];
-    
-    nvc.navigationBar.translucent = NO;
-
-    [self presentViewController:nvc animated:YES completion:nil];
+    [self presentViewController:[[HomeViewController alloc] init] animated:YES completion:nil];
 }
 
 @end

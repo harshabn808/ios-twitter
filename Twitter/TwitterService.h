@@ -15,7 +15,7 @@
 - (void)login;
 - (void)logout;
 
-- (void)homeTimelineWithSuccess:(void (^)(AFHTTPRequestOperation *operation, NSArray *tweets))success
+- (void) TimelineType:(NSString *)type WithSuccess:(void (^)(AFHTTPRequestOperation *operation, NSArray *tweets))success
                                             failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failure;
 
 - (AFHTTPRequestOperation *)getUserInfoWithSuccess:(void (^)(AFHTTPRequestOperation *operation, id responseObject))success
